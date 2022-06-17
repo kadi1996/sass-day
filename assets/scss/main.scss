@@ -1,0 +1,53 @@
+@import "_generals.scss";
+@import "_mixin.scss";
+@import "_variables.scss";
+
+nav {
+    @include flexit;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul {
+        @include flexit;
+
+        li {
+            list-style: none;
+            margin-right: 10px;
+        }
+    }
+}
+
+.card {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    // statt .card-image kann man folgendes schreiben: 
+    &-image {
+        width: 100%;
+
+    }
+
+    &-title {
+        color: $main-color;
+    }
+
+    p {
+        color: $secondary-color;
+    }
+
+    figure {
+        background-color: lightgray;
+
+        &:nth-of-type(2) h2 {
+            color: gold;
+        }
+    }
+}
+
+article h3 {
+    @include styletext(32px, 400, pink, "", uppercase, #000)
+}
